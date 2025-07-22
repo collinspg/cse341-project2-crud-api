@@ -1,26 +1,38 @@
 {
   "name": "cse341-project2-crud-api",
   "version": "1.0.0",
-  "description": "",
+  "description": "My Second Project",
+  "homepage": "https://github.com/collinspg/cse341-project2-crud-api#readme",
+  "bugs": {
+    "url": "https://github.com/collinspg/cse341-project2-crud-api/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/collinspg/cse341-project2-crud-api.git"
+  },
+  "license": "ISC",
+  "author": "Collins Okolie",
+  "type": "commonjs",
   "main": "app.js",
   "scripts": {
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "Collins Okolie",
-  "license": "ISC",
-  "type": "commonjs",
   "dependencies": {
+    "body-parser": "^2.2.0",
     "cors": "^2.8.5",
     "dotenv": "^17.2.0",
     "express": "^5.1.0",
     "express-session": "^1.18.2",
     "joi": "^17.13.3",
+    "mongodb": "^6.17.0",
     "mongoose": "^8.16.4",
     "swagger-ui-express": "^5.0.1"
   },
   "devDependencies": {
+    "eslint": "^9.31.0",
     "nodemon": "^3.1.10",
+    "prettier": "^3.6.2",
     "swagger-autogen": "^2.23.7"
   }
 }
