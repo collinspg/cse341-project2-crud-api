@@ -5,7 +5,7 @@
     "description": "User Api",
     "version": "1.0.0"
   },
-  "host": "localhost:3000",
+  "host": "cse341-project2-crud-api.onrender.com",
   "basePath": "/",
   "schemes": [
     "https",
@@ -43,10 +43,22 @@
             "schema": {
               "type": "object",
               "properties": {
-                "name": {
+                "firstName": {
+                  "example": "any"
+                },
+                "lastName": {
                   "example": "any"
                 },
                 "email": {
+                  "example": "any"
+                },
+                "phone": {
+                  "example": "any"
+                },
+                "address": {
+                  "example": "any"
+                },
+                "role": {
                   "example": "any"
                 }
               }
@@ -101,10 +113,22 @@
             "schema": {
               "type": "object",
               "properties": {
-                "name": {
+                "firstName": {
+                  "example": "any"
+                },
+                "lastName": {
                   "example": "any"
                 },
                 "email": {
+                  "example": "any"
+                },
+                "phone": {
+                  "example": "any"
+                },
+                "address": {
+                  "example": "any"
+                },
+                "role": {
                   "example": "any"
                 }
               }
