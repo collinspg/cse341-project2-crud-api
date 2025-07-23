@@ -1,4 +1,5 @@
-const Task = require('../modelTasks/');
+
+const Task = require('../models/task');
 const { taskCreateSchema, taskUpdateSchema } = require('../validation/taskValidation');
 
 // Create task
