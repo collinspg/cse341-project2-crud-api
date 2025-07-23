@@ -1,42 +1,27 @@
 const express = require('express');
 const router = express.Router();
-const taskController = require('../controllers/tasks');
-const { taskCreateSchema, taskUpdateSchema } = require('../validation/taskValidation');
-const isAuthenticated = require('../validation/authenticate');
+const taskController = require('../controllers/taskController');
 
-// CREATE task
-router.post('/', isAuthenticated, async (req, res, next) => {
-  try {
-    const { error } = taskCreateSchema.validate(req.body);
-    if (error) return res.status(400).json({ error: error.details[0].message });
+const isAuthenticated  = require('../validation/authenticate');
 
-    const task = await taskController.createTask(req.body);
-    res.status(201).json(task);
-  } catch (err) {
-    next(err);
-  }
-});
+// #swagger.tags = ['Tasks']
+// #swagger.description = 'Create a new task'
+router.post('/', isAuthenticated, taskController.createTask);
 
-// READ all tasks
-router.get('/', taskController.getAllTasks);
+// #swagger.tags = ['Tasks']
+// #swagger.description = 'Get all tasks'
+router.get('/', taskController.getTasks);
 
-// READ single task
+// #swagger.tags = ['Tasks']
+// #swagger.description = 'Get task by ID'
 router.get('/:id', taskController.getTaskById);
 
-// UPDATE task
-router.put('/:id', isAuthenticated, async (req, res, next) => {
-  try {
-    const { error } = taskUpdateSchema.validate(req.body);
-    if (error) return res.status(400).json({ error: error.details[0].message });
+// #swagger.tags = ['Tasks']
+// #swagger.description = 'Update task'
+router.put('/:id', isAuthenticated, taskController.updateTask);
 
-    const task = await taskController.updateTask(req.params.id, req.body);
-    res.json(task);
-  } catch (err) {
-    next(err);
-  }
-});
-
-// DELETE task
+// #swagger.tags = ['Tasks']
+// #swagger.description = 'Delete task'
 router.delete('/:id', isAuthenticated, taskController.deleteTask);
 
 module.exports = router;

@@ -5,8 +5,8 @@ const doc = {
         title: 'User Api',
         description: 'User Api',
     },
-    host: 'cse341-project2-crud-api.onrender.com',
-     schemes: ['https', 'http'],
+    host: 'localhost:3000',
+    schemes: ['https', 'http'],
 
 };
 

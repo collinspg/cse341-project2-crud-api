@@ -2,6 +2,12 @@
   "name": "cse341-project2-crud-api",
   "version": "1.0.0",
   "description": "My Second Project",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "homepage": "https://github.com/collinspg/cse341-project2-crud-api#readme",
   "bugs": {
     "url": "https://github.com/collinspg/cse341-project2-crud-api/issues"
@@ -13,11 +19,6 @@
   "license": "ISC",
   "author": "Collins Okolie",
   "type": "commonjs",
-  "main": "app.js",
-  "scripts": {
-    "start": "node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "dependencies": {
     "body-parser": "^2.2.0",
     "cors": "^2.8.5",
