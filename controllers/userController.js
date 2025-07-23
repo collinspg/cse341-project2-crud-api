@@ -1,4 +1,4 @@
-const User = require('../models/User');
+const User = require('../models/user');
 const { userCreateSchema, userUpdateSchema } = require('../validation/userValidation');
 
 // Create user
